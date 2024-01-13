@@ -1,6 +1,9 @@
-:root .theme-light {
+.page.theme_light {
   --bg-color: #fff1f7;
   --text-color: #353430;
+  --text-color-title: #353430;
+  --header-paragraph-text-accent: #000028;
+  --decorated-color: #353430;
   --main-font: "IBM Plex mono";
   --accent-font: #ff8dcb;
   --accent-transform: lowercase;
@@ -10,50 +13,9 @@
   --font-size-main: 18px;
   --font-size-title-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --font-size-title-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  /* Дублируем переменные для светлой темы */
+  --bg-image: url(../images/cover-image-light.png);
 }
 
-/* Остальные стили */
-
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
-.page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
-}
-
-.page.theme_light .header__theme-menu-list {
-  color: var(--text-color, #353430);
-}
-
-.page.theme_light .main__title {
-  color: var(--text-color, #353430);
-}
-
-.page.theme_light .header__paragraph-text {
-  color: var(--text-color, #353430);
-}
-
-.page.theme_light .main__parafraph-title {
-  color: var(--text-color, #353430);
-}
-
-.page.theme_light .main__paragraph-text_accent {
-  color: var(--text-color, #353430);
-}
-
-.page.theme_light .decorated__zone::before {
-  border-block-start: 1px solid var(--text-color, #353430);
-  border-inline-end: 1px solid var(--text-color, #353430);
-}
-
-.page.theme_light .decorated__zone::after {
-  border-block-end: 1px solid var(--text-color, #353430);
-  border-inline-start: 1px solid var(--text-color, #353430);
-}
+.page.theme_light .decorated__rec {
+  display: none;
+} 

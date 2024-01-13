@@ -6,6 +6,9 @@
 :root {
   --bg-color: #fff1f7;
   --text-color: #353430;
+  --text-color-title: #353430;
+  --header-paragraph-text-accent: #000028;
+  --decorated-color: #353430;
   --main-font: "IBM Plex mono";
   --accent-font: #ff8dcb;
   --accent-transform: lowercase;
@@ -15,4 +18,5 @@
   --font-size-main: 18px;
   --font-size-title-mobile: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --font-size-title-desktop: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --bg-image: url(../images/cover-image-light.png);
 }

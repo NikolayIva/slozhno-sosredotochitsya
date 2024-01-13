@@ -3,7 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   color: var(--text-color, #353430);
-  background-image: url(../images/cover-image-light.png);
+  background-image: var(--bg-image);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,8 +31,8 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  border-block-start: 1px solid var(--text-color, #353430);
-  border-inline-end: 1px solid var(--text-color, #353430);
+  border-block-start: 1px solid var(--decorated-color, #353430);
+  border-inline-end: 1px solid var(--decorated-color, #353430);
 }
 
 .decorated__zone::after {
@@ -40,8 +40,31 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
-  border-block-end: 1px solid var(--text-color, #353430);
-  border-inline-start: 1px solid var(--text-color, #353430);
+  border-block-end: 1px solid var(--decorated-color, #353430);
+  border-inline-start: 1px solid var(--decorated-color, #353430);
+}
+
+.page .decorated__rec::before {
+  content: "REC";
+  position: absolute;
+  top: 11px;
+  right: 38px;
+  color: var(--accent-font, #ff0070);
+  line-height: 138.89%;
+  z-index: 2;
+}
+
+.page .decorated__rec::after {
+  content: " ";
+  position: absolute;
+  block-size: 10px;
+  inline-size: 10px;
+  border-radius: 50px;
+  box-shadow: 0 0 5px 2px var(--accent-font, #ff0070);
+  background-color: var(--accent-font, #ff0070);
+  top: 18.5px;
+  right: 19px;
+  z-index: 2;
 }
 
 .header__theme-menu {
@@ -63,6 +86,7 @@
   border: 1px solid color-mix(in srgb, currentColor 0.1%, transparent);
   padding-block-start: 2px;
   padding-block-end: 5px;
+  color: var(--decorated-color, #353430);
 }
 
 .header__theme-menu-button_active {
@@ -116,8 +140,9 @@
   align-self: center;
 }
 
-.title-decor {
+.title__decor {
   background-color: var(--accent-font, #ff8dcb);
+  color: var(--header-paragraph-text-accent, #000028);
 }
 
 .main {
@@ -130,6 +155,7 @@
 .main__title {
   font-size: var(--font-size-main, 18px);
   font-weight: 700;
+  color: var(--text-color-title);
 }
 
 .main__parafraph-title {
@@ -218,6 +244,16 @@
     left: 20px;
   }
 
+  .page .decorated__rec::before {
+    top: 21px;
+    right: 48px;
+  }
+
+  .page .decorated__rec::after {
+    top: 28px;
+    right: 28px;
+  }
+
   .header__title-align {
     margin-inline-start: -20px;
   }
@@ -256,6 +292,7 @@
     grid-template-columns: 1fr 2fr;
     gap: 20px;
   }
+
 
   .main__text-how {
     display: grid;
