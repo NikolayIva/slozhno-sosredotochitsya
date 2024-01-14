@@ -39,28 +39,7 @@
     --bg-image: url(../images/cover-image-dark.png);
   }
 
-  .page.theme_dark .decorated__rec {
+  body .decorated__rec {
     display: block;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
