@@ -18,7 +18,7 @@
 
 .page.theme_light .decorated__rec {
   display: none;
-} 
+}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -41,5 +41,5 @@
 
   .decorated__rec {
     display: none;
-  } 
+  }
 }
