@@ -18,7 +18,7 @@
 
 .page.theme_dark .decorated__rec {
   display: block;
-} 
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -39,7 +39,7 @@
     --bg-image: url(../images/cover-image-dark.png);
   }
 
-  body .decorated__rec {
+  .decorated__rec {
     display: block;
   }
 }
